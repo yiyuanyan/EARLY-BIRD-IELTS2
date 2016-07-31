@@ -14,13 +14,13 @@
 		35976E191D4AEA3C008DCB89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35976E171D4AEA3C008DCB89 /* LaunchScreen.storyboard */; };
 		35976E241D4AEA3C008DCB89 /* EARLY_BIRD_IELTS2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E231D4AEA3C008DCB89 /* EARLY_BIRD_IELTS2Tests.m */; };
 		35976E2F1D4AEA3C008DCB89 /* EARLY_BIRD_IELTS2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E2E1D4AEA3C008DCB89 /* EARLY_BIRD_IELTS2UITests.m */; };
-		35976E3E1D4AFD65008DCB89 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E3D1D4AFD65008DCB89 /* HomeTableViewController.m */; };
 		35976E4F1D4B23EA008DCB89 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E431D4B23EA008DCB89 /* AFHTTPSessionManager.m */; };
 		35976E501D4B23EA008DCB89 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E461D4B23EA008DCB89 /* AFNetworkReachabilityManager.m */; };
 		35976E511D4B23EA008DCB89 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E481D4B23EA008DCB89 /* AFSecurityPolicy.m */; };
 		35976E521D4B23EA008DCB89 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E4A1D4B23EA008DCB89 /* AFURLRequestSerialization.m */; };
 		35976E531D4B23EA008DCB89 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E4C1D4B23EA008DCB89 /* AFURLResponseSerialization.m */; };
 		35976E541D4B23EA008DCB89 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E4E1D4B23EA008DCB89 /* AFURLSessionManager.m */; };
+		35B53AC71D4DDE640029F060 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B53AC61D4DDE640029F060 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 		35976E2A1D4AEA3C008DCB89 /* EARLY-BIRD-IELTS2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EARLY-BIRD-IELTS2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35976E2E1D4AEA3C008DCB89 /* EARLY_BIRD_IELTS2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EARLY_BIRD_IELTS2UITests.m; sourceTree = "<group>"; };
 		35976E301D4AEA3C008DCB89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35976E3C1D4AFD65008DCB89 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
-		35976E3D1D4AFD65008DCB89 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		35976E3F1D4B2323008DCB89 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		35976E421D4B23EA008DCB89 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		35976E431D4B23EA008DCB89 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
@@ -71,6 +69,8 @@
 		35976E4C1D4B23EA008DCB89 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		35976E4D1D4B23EA008DCB89 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		35976E4E1D4B23EA008DCB89 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		35B53AC51D4DDE640029F060 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		35B53AC61D4DDE640029F060 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 			children = (
 				35976E0C1D4AEA3C008DCB89 /* AppDelegate.h */,
 				35976E0D1D4AEA3C008DCB89 /* AppDelegate.m */,
-				35976E3C1D4AFD65008DCB89 /* HomeTableViewController.h */,
-				35976E3D1D4AFD65008DCB89 /* HomeTableViewController.m */,
+				35B53AC51D4DDE640029F060 /* HomeViewController.h */,
+				35B53AC61D4DDE640029F060 /* HomeViewController.m */,
 				35976E121D4AEA3C008DCB89 /* Main.storyboard */,
 				35976E151D4AEA3C008DCB89 /* Assets.xcassets */,
 				35976E171D4AEA3C008DCB89 /* LaunchScreen.storyboard */,
@@ -317,10 +317,10 @@
 			files = (
 				35976E541D4B23EA008DCB89 /* AFURLSessionManager.m in Sources */,
 				35976E0E1D4AEA3C008DCB89 /* AppDelegate.m in Sources */,
-				35976E3E1D4AFD65008DCB89 /* HomeTableViewController.m in Sources */,
 				35976E501D4B23EA008DCB89 /* AFNetworkReachabilityManager.m in Sources */,
 				35976E0B1D4AEA3C008DCB89 /* main.m in Sources */,
 				35976E511D4B23EA008DCB89 /* AFSecurityPolicy.m in Sources */,
+				35B53AC71D4DDE640029F060 /* HomeViewController.m in Sources */,
 				35976E521D4B23EA008DCB89 /* AFURLRequestSerialization.m in Sources */,
 				35976E531D4B23EA008DCB89 /* AFURLResponseSerialization.m in Sources */,
 				35976E4F1D4B23EA008DCB89 /* AFHTTPSessionManager.m in Sources */,
@@ -567,6 +567,7 @@
 				35976E351D4AEA3C008DCB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35976E361D4AEA3C008DCB89 /* Build configuration list for PBXNativeTarget "EARLY-BIRD-IELTS2Tests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +576,7 @@
 				35976E381D4AEA3C008DCB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35976E391D4AEA3C008DCB89 /* Build configuration list for PBXNativeTarget "EARLY-BIRD-IELTS2UITests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +585,7 @@
 				35976E3B1D4AEA3C008DCB89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
