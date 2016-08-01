@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dsz-4a-B0l">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="dsz-4a-B0l">
                                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dsz-4a-B0l" id="2yq-mY-RuA">
@@ -50,6 +50,10 @@
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="cr9-Cf-vHt" id="03D-Ye-jHL"/>
+                                            <outlet property="delegate" destination="cr9-Cf-vHt" id="Tts-LA-lXg"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
@@ -60,6 +64,9 @@
                                     <constraint firstItem="QgI-lh-NQM" firstAttribute="leading" secondItem="nVD-5u-MOi" secondAttribute="leading" id="WDU-aD-Ewy"/>
                                     <constraint firstAttribute="bottom" secondItem="QgI-lh-NQM" secondAttribute="bottom" id="Woq-uR-Xpo"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="cr9-Cf-vHt" id="BJn-Q0-qmC"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqs-bk-SL5">
                                 <rect key="frame" x="0.0" y="595" width="600" height="12"/>

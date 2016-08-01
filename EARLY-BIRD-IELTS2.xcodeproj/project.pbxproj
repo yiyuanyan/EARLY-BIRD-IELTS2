@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353B06AB1D4F14D6009931FD /* Part1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06AA1D4F14D6009931FD /* Part1TableViewController.m */; };
+		353B06AE1D4F2A2A009931FD /* Part1ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */; };
+		353B06B11D4F389E009931FD /* Part2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06B01D4F389E009931FD /* Part2TableViewController.m */; };
 		35976E0B1D4AEA3C008DCB89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E0A1D4AEA3C008DCB89 /* main.m */; };
 		35976E0E1D4AEA3C008DCB89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E0D1D4AEA3C008DCB89 /* AppDelegate.m */; };
 		35976E141D4AEA3C008DCB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35976E121D4AEA3C008DCB89 /* Main.storyboard */; };
@@ -41,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		353B06A91D4F14D6009931FD /* Part1TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1TableViewController.h; sourceTree = "<group>"; };
+		353B06AA1D4F14D6009931FD /* Part1TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1TableViewController.m; sourceTree = "<group>"; };
+		353B06AC1D4F2A2A009931FD /* Part1ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1ListTableViewController.h; sourceTree = "<group>"; };
+		353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1ListTableViewController.m; sourceTree = "<group>"; };
+		353B06AF1D4F389E009931FD /* Part2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part2TableViewController.h; sourceTree = "<group>"; };
+		353B06B01D4F389E009931FD /* Part2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part2TableViewController.m; sourceTree = "<group>"; };
 		35976E061D4AEA3C008DCB89 /* EARLY-BIRD-IELTS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BIRD-IELTS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35976E0A1D4AEA3C008DCB89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35976E0C1D4AEA3C008DCB89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +107,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353B06A71D4F148D009931FD /* Part1 */ = {
+			isa = PBXGroup;
+			children = (
+				353B06A91D4F14D6009931FD /* Part1TableViewController.h */,
+				353B06AA1D4F14D6009931FD /* Part1TableViewController.m */,
+				353B06AC1D4F2A2A009931FD /* Part1ListTableViewController.h */,
+				353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */,
+			);
+			path = Part1;
+			sourceTree = "<group>";
+		};
+		353B06A81D4F1493009931FD /* Part2 */ = {
+			isa = PBXGroup;
+			children = (
+				353B06AF1D4F389E009931FD /* Part2TableViewController.h */,
+				353B06B01D4F389E009931FD /* Part2TableViewController.m */,
+			);
+			path = Part2;
+			sourceTree = "<group>";
+		};
 		35976DFD1D4AEA3C008DCB89 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +152,8 @@
 		35976E081D4AEA3C008DCB89 /* EARLY-BIRD-IELTS2 */ = {
 			isa = PBXGroup;
 			children = (
+				353B06A81D4F1493009931FD /* Part2 */,
+				353B06A71D4F148D009931FD /* Part1 */,
 				35976E0C1D4AEA3C008DCB89 /* AppDelegate.h */,
 				35976E0D1D4AEA3C008DCB89 /* AppDelegate.m */,
 				35B53AC51D4DDE640029F060 /* HomeViewController.h */,
@@ -320,7 +351,10 @@
 				35976E501D4B23EA008DCB89 /* AFNetworkReachabilityManager.m in Sources */,
 				35976E0B1D4AEA3C008DCB89 /* main.m in Sources */,
 				35976E511D4B23EA008DCB89 /* AFSecurityPolicy.m in Sources */,
+				353B06B11D4F389E009931FD /* Part2TableViewController.m in Sources */,
 				35B53AC71D4DDE640029F060 /* HomeViewController.m in Sources */,
+				353B06AE1D4F2A2A009931FD /* Part1ListTableViewController.m in Sources */,
+				353B06AB1D4F14D6009931FD /* Part1TableViewController.m in Sources */,
 				35976E521D4B23EA008DCB89 /* AFURLRequestSerialization.m in Sources */,
 				35976E531D4B23EA008DCB89 /* AFURLResponseSerialization.m in Sources */,
 				35976E4F1D4B23EA008DCB89 /* AFHTTPSessionManager.m in Sources */,
