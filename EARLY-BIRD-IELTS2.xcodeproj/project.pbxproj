@@ -10,6 +10,9 @@
 		353B06AB1D4F14D6009931FD /* Part1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06AA1D4F14D6009931FD /* Part1TableViewController.m */; };
 		353B06AE1D4F2A2A009931FD /* Part1ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */; };
 		353B06B11D4F389E009931FD /* Part2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353B06B01D4F389E009931FD /* Part2TableViewController.m */; };
+		354BBE271D51C88E005261EF /* Part2ContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354BBE261D51C88E005261EF /* Part2ContentTableViewController.m */; };
+		354BBE2A1D51D15B005261EF /* Part2ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354BBE291D51D15B005261EF /* Part2ContentTableViewCell.m */; };
+		357C6EFF1D5034FA00AFF1BF /* Part1ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357C6EFE1D5034FA00AFF1BF /* Part1ContentViewController.m */; };
 		35976E0B1D4AEA3C008DCB89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E0A1D4AEA3C008DCB89 /* main.m */; };
 		35976E0E1D4AEA3C008DCB89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35976E0D1D4AEA3C008DCB89 /* AppDelegate.m */; };
 		35976E141D4AEA3C008DCB89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35976E121D4AEA3C008DCB89 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1ListTableViewController.m; sourceTree = "<group>"; };
 		353B06AF1D4F389E009931FD /* Part2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part2TableViewController.h; sourceTree = "<group>"; };
 		353B06B01D4F389E009931FD /* Part2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part2TableViewController.m; sourceTree = "<group>"; };
+		354BBE251D51C88E005261EF /* Part2ContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part2ContentTableViewController.h; sourceTree = "<group>"; };
+		354BBE261D51C88E005261EF /* Part2ContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part2ContentTableViewController.m; sourceTree = "<group>"; };
+		354BBE281D51D15B005261EF /* Part2ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part2ContentTableViewCell.h; sourceTree = "<group>"; };
+		354BBE291D51D15B005261EF /* Part2ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part2ContentTableViewCell.m; sourceTree = "<group>"; };
+		357C6EFD1D5034FA00AFF1BF /* Part1ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part1ContentViewController.h; sourceTree = "<group>"; };
+		357C6EFE1D5034FA00AFF1BF /* Part1ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part1ContentViewController.m; sourceTree = "<group>"; };
 		35976E061D4AEA3C008DCB89 /* EARLY-BIRD-IELTS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EARLY-BIRD-IELTS2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35976E0A1D4AEA3C008DCB89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35976E0C1D4AEA3C008DCB89 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +123,8 @@
 				353B06AA1D4F14D6009931FD /* Part1TableViewController.m */,
 				353B06AC1D4F2A2A009931FD /* Part1ListTableViewController.h */,
 				353B06AD1D4F2A2A009931FD /* Part1ListTableViewController.m */,
+				357C6EFD1D5034FA00AFF1BF /* Part1ContentViewController.h */,
+				357C6EFE1D5034FA00AFF1BF /* Part1ContentViewController.m */,
 			);
 			path = Part1;
 			sourceTree = "<group>";
@@ -123,6 +134,10 @@
 			children = (
 				353B06AF1D4F389E009931FD /* Part2TableViewController.h */,
 				353B06B01D4F389E009931FD /* Part2TableViewController.m */,
+				354BBE251D51C88E005261EF /* Part2ContentTableViewController.h */,
+				354BBE261D51C88E005261EF /* Part2ContentTableViewController.m */,
+				354BBE281D51D15B005261EF /* Part2ContentTableViewCell.h */,
+				354BBE291D51D15B005261EF /* Part2ContentTableViewCell.m */,
 			);
 			path = Part2;
 			sourceTree = "<group>";
@@ -347,6 +362,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35976E541D4B23EA008DCB89 /* AFURLSessionManager.m in Sources */,
+				354BBE271D51C88E005261EF /* Part2ContentTableViewController.m in Sources */,
+				357C6EFF1D5034FA00AFF1BF /* Part1ContentViewController.m in Sources */,
 				35976E0E1D4AEA3C008DCB89 /* AppDelegate.m in Sources */,
 				35976E501D4B23EA008DCB89 /* AFNetworkReachabilityManager.m in Sources */,
 				35976E0B1D4AEA3C008DCB89 /* main.m in Sources */,
@@ -358,6 +375,7 @@
 				35976E521D4B23EA008DCB89 /* AFURLRequestSerialization.m in Sources */,
 				35976E531D4B23EA008DCB89 /* AFURLResponseSerialization.m in Sources */,
 				35976E4F1D4B23EA008DCB89 /* AFHTTPSessionManager.m in Sources */,
+				354BBE2A1D51D15B005261EF /* Part2ContentTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

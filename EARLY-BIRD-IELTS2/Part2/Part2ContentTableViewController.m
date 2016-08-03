@@ -1,27 +1,24 @@
 //
-//  Part1ListTableViewController.m
+//  Part2ContentTableViewController.m
 //  EARLY-BIRD-IELTS2
 //
-//  Created by 何建新 on 16/8/1.
+//  Created by 何建新 on 16/8/3.
 //  Copyright © 2016年 何建新. All rights reserved.
 //
 
-#import "Part1ListTableViewController.h"
-#import "Part1ContentViewController.h"
+#import "Part2ContentTableViewController.h"
+#import "Part2ContentTableViewCell.h"
 #import "AFNetworking.h"
-@interface Part1ListTableViewController ()
+@interface Part2ContentTableViewController ()
 @property(nonatomic, strong)NSArray *infoArray;
 @end
 
-@implementation Part1ListTableViewController
+@implementation Part2ContentTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"daohang_fanhui_tubia@2x(4)"] style:UIBarButtonItemStylePlain target: self action:@selector(goBack)];
-    NSString *url = [NSString stringWithFormat:@"http://test.benniaoyasi.cn/api.php?m=api&c=content&a=listcontent&appid=1&version=4.5.0&devtype=ios&uuid=29AD423E-F715-4B80-9D14-3B537E219D33&cid=%@",self.cid];
-    [self.tableView setSeparatorInset:UIEdgeInsetsZero];
-    [self.tableView setLayoutMargins:UIEdgeInsetsZero];
-    [self getJSON:url];
+    [self getJSON:[NSString stringWithFormat:@"http://test.benniaoyasi.cn/api.php?m=api&c=content&a=contentinfo&appid=1&mobile=18600562546&version=4.5.0&devtype=ios&uuid=29AD423E-F715-4B80-9D14-3B537E219D33&id=%@",self.cid]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,18 +29,20 @@
 -(void)getJSON:(NSString *)url{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager GET:url parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"%@",downloadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if([responseObject[@"ecode"] isEqualToString:@"0"]){
             NSMutableArray *mArray = [NSMutableArray array];
             for(NSDictionary *d in responseObject[@"edata"]){
                 [mArray addObject:d];
             }
             self.infoArray = mArray;
-            
+            NSLog(@"%@",self.infoArray);
             [self.tableView reloadData];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+        
     }];
 }
 -(void)goBack{
@@ -53,41 +52,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return self.infoArray.count;
+    if(section == 0){
+        return 1;
+    }
+    if(section == 1){
+        //return [self.infoArray[@"part2List"] count]
+    }
+    
+    return 0;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    Part2ContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[Part2ContentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.textLabel.numberOfLines = 1;
-    cell.font = [UIFont systemFontOfSize:16];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d.%@",indexPath.row + 1,self.infoArray[indexPath.row][@"question"]];
-    [cell setSeparatorInset:UIEdgeInsetsZero];
-    [cell setLayoutMargins:UIEdgeInsetsZero];
+    cell.infoArray = self.infoArray;
     // Configure the cell...
     
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 50;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    Part1ContentViewController *part1ContentView = [[Part1ContentViewController alloc] init];
-    part1ContentView.contentDic = self.infoArray[indexPath.row];
-    part1ContentView.title = self.infoArray[indexPath.row][@"question"];
-    [self.navigationController pushViewController:part1ContentView animated:YES];
-}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
