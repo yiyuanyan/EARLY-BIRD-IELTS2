@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol Part2ContentTableViewCellDelegate<NSObject>
+- (void)choseTerm:(UIButton *)button;
 
+@end
 @interface Part2ContentTableViewCell : UITableViewCell
+@property(assign, nonatomic)id<Part2ContentTableViewCellDelegate> delegate;
+
+
 @property(nonatomic, strong) NSArray *infoArray;
+@property(nonatomic, assign) NSIndexPath *index;
+@property(nonatomic, assign) BOOL cellHidden;
+
 @end
